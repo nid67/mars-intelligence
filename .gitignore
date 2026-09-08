@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+env/
+
+# Compiled files
+__pycache__/
+*.pyc
+dist/
+build/
+
+# Database
+*.db
+*.sqlite3
+
+# Environment
+.env
+
+# Editor
+.vscode/
+.idea/
+
+# Mac
+.DS_Store

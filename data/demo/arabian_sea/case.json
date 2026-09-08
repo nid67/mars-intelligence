@@ -1,0 +1,79 @@
+{
+  "case_id": "case-arabian-sea-001",
+  "name": "Offshore Mumbai High / SLOC Transit Corridor",
+  "region": "Arabian Sea",
+  "data_mode": "DEMONSTRATION",
+  "observation_time": "2026-03-14T06:30:00Z",
+  "bbox": [71.5, 18.5, 72.8, 19.8],
+  "description": "Synthetic demonstration scenario in the major Arabian Sea crude carrier transit lane offshore Mumbai. Simulates a dark SAR slick formation under moderate NW winds and southward ocean currents.",
+  "center": [72.15, 19.15],
+  "environmental": {
+    "u_current": 0.12,
+    "v_current": -0.22,
+    "u_wind": 3.8,
+    "v_wind": -4.5,
+    "source": "DEMONSTRATION_SYNTHETIC",
+    "resolution": "0.083 deg"
+  },
+  "spill": {
+    "center": [72.18, 19.12],
+    "estimated_area_sqkm": 14.8,
+    "orientation_deg": 145.0,
+    "elongation": 3.4,
+    "confidence": 0.88,
+    "look_alike_risk": 0.15
+  },
+  "vessels": [
+    {
+      "mmsi": "419000101",
+      "imo": "9382011",
+      "name": "OCEAN VOYAGER",
+      "vessel_type": "CRUDE_OIL_TANKER",
+      "flag": "IN",
+      "role": "PRIMARY_CANDIDATE",
+      "track_profile": "TRANSIT_WITH_ORIGIN_OVERLAP",
+      "has_gap": false
+    },
+    {
+      "mmsi": "419000102",
+      "imo": "9451022",
+      "name": "ARABIAN STAR",
+      "vessel_type": "PRODUCT_TANKER",
+      "flag": "LR",
+      "role": "SECONDARY_CANDIDATE",
+      "track_profile": "PROXIMATE_TRANSIT_EARLY_WINDOW",
+      "has_gap": true,
+      "gap_duration_hours": 3.5
+    },
+    {
+      "mmsi": "419000103",
+      "imo": "9612033",
+      "name": "MUMBAI PEARL",
+      "vessel_type": "BULK_CARRIER",
+      "flag": "PA",
+      "role": "NON_COMPATIBLE_DISTANCE",
+      "track_profile": "PARALLEL_TRAFFIC_SEPARATION",
+      "has_gap": false
+    },
+    {
+      "mmsi": "419000104",
+      "imo": "9723044",
+      "name": "BLUE TIDE",
+      "vessel_type": "CONTAINER_SHIP",
+      "flag": "SG",
+      "role": "NON_COMPATIBLE_TIME",
+      "track_profile": "TRANSIT_POST_OBSERVATION",
+      "has_gap": false
+    },
+    {
+      "mmsi": "419000105",
+      "imo": null,
+      "name": "SAGAR RATNA III",
+      "vessel_type": "FISHING_VESSEL",
+      "flag": "IN",
+      "role": "LOCAL_NON_SOURCE",
+      "track_profile": "COASTAL_TRAWL",
+      "has_gap": false
+    }
+  ]
+}

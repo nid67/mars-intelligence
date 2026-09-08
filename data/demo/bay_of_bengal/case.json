@@ -1,0 +1,68 @@
+{
+  "case_id": "case-bay-of-bengal-002",
+  "name": "East Coast Approach / Visakhapatnam Offshore",
+  "region": "Bay of Bengal",
+  "data_mode": "DEMONSTRATION",
+  "observation_time": "2026-04-10T12:00:00Z",
+  "bbox": [83.2, 17.2, 84.6, 18.3],
+  "description": "Synthetic demonstration scenario along the East Coast shipping approach to Visakhapatnam and Paradip. Highlights multi-vessel attribution disambiguation under East India Coastal Current (EICC) conditions.",
+  "center": [83.9, 17.75],
+  "environmental": {
+    "u_current": 0.28,
+    "v_current": 0.18,
+    "u_wind": -2.5,
+    "v_wind": 5.2,
+    "source": "DEMONSTRATION_SYNTHETIC",
+    "resolution": "0.083 deg"
+  },
+  "spill": {
+    "center": [83.92, 17.78],
+    "estimated_area_sqkm": 21.4,
+    "orientation_deg": 65.0,
+    "elongation": 4.1,
+    "confidence": 0.91,
+    "look_alike_risk": 0.12
+  },
+  "vessels": [
+    {
+      "mmsi": "419000201",
+      "imo": "9420011",
+      "name": "COROMANDEL PIONEER",
+      "vessel_type": "CHEMICAL_TANKER",
+      "flag": "IN",
+      "role": "PRIMARY_CANDIDATE",
+      "track_profile": "SLOWDOWN_AND_COURSE_ALTERATION",
+      "has_gap": false
+    },
+    {
+      "mmsi": "419000202",
+      "imo": "9551022",
+      "name": "BENGAL TRADER",
+      "vessel_type": "BULK_CARRIER",
+      "flag": "BD",
+      "role": "SECONDARY_CANDIDATE",
+      "track_profile": "UPSTREAM_TRANSIT",
+      "has_gap": false
+    },
+    {
+      "mmsi": "419000203",
+      "imo": "9682033",
+      "name": "VIZAG MARU",
+      "vessel_type": "CONTAINER_SHIP",
+      "flag": "JP",
+      "role": "NON_COMPATIBLE_DISTANCE",
+      "track_profile": "HIGH_SPEED_OUTER_PASS",
+      "has_gap": false
+    },
+    {
+      "mmsi": "419000204",
+      "imo": null,
+      "name": "ANDHRA PRIDE",
+      "vessel_type": "TUG",
+      "flag": "IN",
+      "role": "PORT_OPERATIONS",
+      "track_profile": "HARBOR_APPROACH",
+      "has_gap": false
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "case_id": "case-ennore-optional-004",
+  "name": "Ennore / Chennai Coastal Demonstration (January 2017 Historical Case)",
+  "region": "Indian East Coast",
+  "data_mode": "CURATED_HISTORICAL",
+  "observation_time": "2017-01-28T04:00:00Z",
+  "bbox": [80.25, 13.15, 80.45, 13.35],
+  "description": "Curated demonstration case representing the historical 28 January 2017 collision between MT Dawn Kanchipuram and BW Maple off Kamarajar Port, Ennore. Provided strictly as historical calibration data, not hardcoded application logic.",
+  "center": [80.34, 13.25],
+  "environmental": {
+    "u_current": -0.15,
+    "v_current": -0.32,
+    "u_wind": 2.1,
+    "v_wind": -3.8,
+    "source": "CURATED_HISTORICAL_ANALYSIS",
+    "resolution": "0.05 deg"
+  },
+  "spill": {
+    "center": [80.338, 13.242],
+    "estimated_area_sqkm": 9.5,
+    "orientation_deg": 160.0,
+    "elongation": 3.8,
+    "confidence": 0.95,
+    "look_alike_risk": 0.05
+  },
+  "vessels": [
+    {
+      "mmsi": "419000401",
+      "imo": "9252011",
+      "name": "HISTORICAL_VESSEL_A",
+      "vessel_type": "OIL_TANKER",
+      "flag": "IN",
+      "role": "PRIMARY_CANDIDATE",
+      "track_profile": "COLLISION_LOCATION_INTERSECTION",
+      "has_gap": false
+    },
+    {
+      "mmsi": "419000402",
+      "imo": "9361022",
+      "name": "HISTORICAL_VESSEL_B",
+      "vessel_type": "LPG_CARRIER",
+      "flag": "IM",
+      "role": "INVOLVED_OUTBOUND",
+      "track_profile": "PORT_DEPARTURE_CHANNEL",
+      "has_gap": false
+    },
+    {
+      "mmsi": "419000403",
+      "imo": "9482033",
+      "name": "CHENNAI CARRIER",
+      "vessel_type": "CONTAINER_SHIP",
+      "flag": "PA",
+      "role": "ANCHORAGE_STANDBY",
+      "track_profile": "OUTER_ANCHORAGE",
+      "has_gap": false
+    }
+  ]
+}

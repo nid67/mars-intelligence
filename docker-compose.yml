@@ -1,0 +1,49 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: mars-postgis
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: mars
+      POSTGRES_USER: mars
+      POSTGRES_PASSWORD: mars
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mars -d mars"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: mars-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=development
+      - DEBUG=true
+      - DATABASE_URL=postgresql+psycopg://mars:mars@db:5432/mars
+      - DATA_MODE=DEMONSTRATION
+      - COPERNICUS_CLIENT_ID=${COPERNICUS_CLIENT_ID:-}
+      - COPERNICUS_CLIENT_SECRET=${COPERNICUS_CLIENT_SECRET:-}
+      - COPERNICUS_MARINE_USERNAME=${COPERNICUS_MARINE_USERNAME:-}
+      - COPERNICUS_MARINE_PASSWORD=${COPERNICUS_MARINE_PASSWORD:-}
+      - GFW_API_TOKEN=${GFW_API_TOKEN:-}
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - .:/app
+      - cache_data:/app/cache
+
+volumes:
+  postgres_data:
+  cache_data:

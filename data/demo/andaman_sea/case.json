@@ -1,0 +1,59 @@
+{
+  "case_id": "case-andaman-sea-003",
+  "name": "Great Nicobar / Malacca Strait Western Approach",
+  "region": "Andaman Sea",
+  "data_mode": "DEMONSTRATION",
+  "observation_time": "2026-05-20T03:15:00Z",
+  "bbox": [92.8, 6.4, 94.2, 7.8],
+  "description": "Synthetic demonstration scenario in the Six Degree Channel / Great Nicobar strategic choke point approaching the Malacca Strait. Evaluates high-density international tanker transit under intense tropical convective conditions.",
+  "center": [93.5, 7.1],
+  "environmental": {
+    "u_current": -0.35,
+    "v_current": 0.05,
+    "u_wind": -6.1,
+    "v_wind": -2.2,
+    "source": "DEMONSTRATION_SYNTHETIC",
+    "resolution": "0.083 deg"
+  },
+  "spill": {
+    "center": [93.48, 7.08],
+    "estimated_area_sqkm": 28.6,
+    "orientation_deg": 105.0,
+    "elongation": 5.2,
+    "confidence": 0.94,
+    "look_alike_risk": 0.09
+  },
+  "vessels": [
+    {
+      "mmsi": "419000301",
+      "imo": "9312011",
+      "name": "PACIFIC TITAN",
+      "vessel_type": "VERY_LARGE_CRUDE_CARRIER",
+      "flag": "MH",
+      "role": "PRIMARY_CANDIDATE",
+      "track_profile": "EASTBOUND_TRANSIT_THROUGH_ORIGIN",
+      "has_gap": false
+    },
+    {
+      "mmsi": "419000302",
+      "imo": "9491022",
+      "name": "MALACCA SPIRIT",
+      "vessel_type": "VLCC",
+      "flag": "PA",
+      "role": "SECONDARY_CANDIDATE",
+      "track_profile": "CONVOY_TRAILING_2H",
+      "has_gap": true,
+      "gap_duration_hours": 2.2
+    },
+    {
+      "mmsi": "419000303",
+      "imo": "9592033",
+      "name": "NICOBAR NAVIGATOR",
+      "vessel_type": "GENERAL_CARGO",
+      "flag": "SG",
+      "role": "COUNTER_TRAFFIC",
+      "track_profile": "WESTBOUND_SEPARATION_SCHEME",
+      "has_gap": false
+    }
+  ]
+}
